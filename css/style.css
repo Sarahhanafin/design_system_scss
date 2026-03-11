@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/*Primary Colours*/
+/*Secondary Colours*/
+/*Neutral Colours*/
+/* ==================================================
+   MIXINS
+================================================== */
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+.heading-lg {
+  font-size: 40px;
+  background-color: red;
+  margin-bottom: 32px;
+  color: #DAE9FB;
+  font-family: "verdana", "sans-srif", "gorgia";
+  font-weight: 600;
+  color: #141414;
+  padding: 4px;
+}
+
+h2 {
+  font-family: "verdana", "sans-srif", "gorgia";
+  font-weight: 600;
+  color: #141414;
+}
+
+/* ==================================================
+   ELEMENT STYLES
+================================================== */
+p {
+  background-color: white;
+}
+p button {
+  color: rgb(79, 188, 186);
+}
+
+/* ==================================================
+   COLOR – PRIMARY
+================================================== */
+.primary-100 {
+  background: #DAE9FB;
+}
+
+.primary-300 {
+  background: #7791C8;
+}
+
+.primary-500 {
+  background: #4B6DA3;
+}
+
+.primary-700 {
+  background: #1E276B;
+}
+
+.primary-900 {
+  background: #000632;
+}
+
+/* ==================================================
+   COLOR – SECONDARY
+================================================== */
+.secondary-100 {
+  background: #FFE3F9;
+}
+
+.secondary-300 {
+  background: #D596C7;
+}
+
+.secondary-500 {
+  background: #914A82;
+}
+
+.secondary-700 {
+  background: #612053;
+}
+
+.secondary-900 {
+  background: #34062A;
+}
+
+/* ==================================================
+   COLOR UTILITIES – NEUTRAL
+================================================== */
+.neutral-100 {
+  background: #FAFAFA;
+}
+
+.neutral-300 {
+  background: #E6E6E6;
+}
+
+.neutral-500 {
+  background: #858585;
+}
+
+.neutral-700 {
+  background: #363636;
+}
+
+.neutral-900 {
+  background: #141414;
+}
+
+/* ==================================================
+   LAYOUT
+================================================== */
+.container {
+  max-width: 1100px;
+  margin: 16px;
+  padding: 8px;
+}
+
+/* ==================================================
+   PALETTE COMPONENT
+================================================== */
+.palette {
+  margin-bottom: 32px;
+}
+
+.palette__title {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.palette_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.swatch {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.swatch-box {
+  width: 150px;
+  height: 150px;
+}
+
+.swatch span {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ======================
+   Base
+====================== */
+body {
+  background-color: #FAFAFA;
+  font-family: "arial", "sans-serif";
+  color: #141414;
+  margin: 0;
+  padding: 40px;
+}
+
+/* ======================
+   Headings
+====================== */
+.h1 {
+  font-family: "verdana", "sans-srif", "gorgia";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.h2 {
+  font-family: "verdana", "sans-srif", "gorgia";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.h3 {
+  font-family: "verdana", "sans-srif", "gorgia";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ======================
+   Body Text
+====================== */
+.body-lg {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.body-sm {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ======================
+   Small Text
+====================== */
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.caption {
+  font-size: 13px;
+  color: #858585;
+}
+
+.placeholder {
+  font-size: 14px;
+  color: #858585;
+}
+
+.spacing {
+  background: grey;
+  height: 20px;
+}
+
+.spacing-container .spacing {
+  width: 200px;
+}
+.spacing-container .spacing-xs {
+  height: 4px;
+}
+.spacing-container .spacing-sm {
+  height: 8px;
+}
+.spacing-container .spacing-md {
+  height: 16px;
+}
+.spacing-container .spacing-lg {
+  height: 32px;
+}
+.spacing-container .spacing-xl {
+  height: 64px;
+}/*# sourceMappingURL=style.css.map */

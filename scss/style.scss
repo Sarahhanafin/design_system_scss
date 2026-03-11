@@ -1,0 +1,233 @@
+@use 'foundations/index' as *;
+@use 'components/buttons/button.scss';
+
+/* ==================================================
+   MIXINS
+================================================== */
+
+@mixin heading-defaults {
+  font-family: $font-heading;
+  font-weight: 600;
+  color: $neutral-900;
+}
+
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+
+.heading-lg {
+  font-size: $font-size-x1;
+  background-color: red;
+  margin-bottom: $spacing-lg;
+  color: $primary-100;
+  @include heading-defaults;
+  padding: $spacing-xs;
+}
+
+h2 {
+  @include heading-defaults;
+}
+
+
+/* ==================================================
+   ELEMENT STYLES
+================================================== */
+
+p {
+  background-color: white;
+
+  button {
+    color: rgb(79, 188, 186);
+  }
+}
+
+
+/* ==================================================
+   COLOR – PRIMARY
+================================================== */
+
+.primary-100 { background: $primary-100; }
+.primary-300 { background: $primary-300; }
+.primary-500 { background: $primary-500; }
+.primary-700 { background: $primary-700; }
+.primary-900 { background: $primary-900; }
+
+
+/* ==================================================
+   COLOR – SECONDARY
+================================================== */
+
+.secondary-100 { background: $secondary-100; }
+.secondary-300 { background: $secondary-300; }
+.secondary-500 { background: $secondary-500; }
+.secondary-700 { background: $secondary-700; }
+.secondary-900 { background: $secondary-900; }
+
+
+/* ==================================================
+   COLOR UTILITIES – NEUTRAL
+================================================== */
+
+.neutral-100 { background: $neutral-100; }
+.neutral-300 { background: $neutral-300; }
+.neutral-500 { background: $neutral-500; }
+.neutral-700 { background: $neutral-700; }
+.neutral-900 { background: $neutral-900; }
+
+
+/* ==================================================
+   LAYOUT
+================================================== */
+
+.container {
+  max-width: 1100px;
+  margin: $spacing-md;
+  padding: $spacing-sm;
+}
+
+
+/* ==================================================
+   PALETTE COMPONENT
+================================================== */
+
+.palette {
+  margin-bottom: $spacing-lg;
+}
+
+.palette__title {
+  font-size: 32px;
+  margin-bottom: $spacing-lg;
+}
+
+.palette_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.swatch {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.swatch-box {
+  width: 150px;
+  height: 150px;
+}
+
+.swatch span {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+  
+
+  /* ======================
+   Base
+====================== */
+
+body {
+    background-color: $neutral-100;
+    font-family: $font-sans;
+    color: $neutral-900;
+    margin: 0;
+    padding: 40px;
+  }
+  
+  /* ======================
+     Headings
+  ====================== */
+  
+  .h1 {
+    font-family: $font-heading;
+    font-size: $fs-h1;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  
+  .h2 {
+    font-family: $font-heading;
+    font-size: $fs-h2;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .h3 {
+    font-family: $font-heading;
+    font-size: $fs-h3;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  /* ======================
+     Body Text
+  ====================== */
+  
+  .body-lg {
+    font-size: $fs-body-lg;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  .body-sm {
+    font-size: $fs-body-sm;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  /* ======================
+     Small Text
+  ====================== */
+  
+  .label {
+    font-size: $fs-label;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .caption {
+    font-size: $fs-caption;
+    color: $neutral-500;
+  }
+  
+  .placeholder {
+    font-size: $fs-placeholder;
+    color: $neutral-500;
+  }
+
+ 
+  .spacing{
+    background:grey ;
+    height: 20px;
+  }
+
+  .spacing-container{
+    .spacing{
+        width:200px;
+    }
+    .spacing-xs{
+        height:$spacing-xs;
+  
+    }
+    .spacing-sm{
+        height:$spacing-sm;
+ 
+    }
+    .spacing-md{
+        height:$spacing-md;
+      
+    }
+    .spacing-lg{
+        height:$spacing-lg;
+   
+    }
+    .spacing-xl{
+        height:$spacing-xl;
+      
+    }
+  }
