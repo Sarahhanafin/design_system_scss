@@ -21,3 +21,9 @@ ul {
   ul li a:hover {
     background-color: #1E276B;
   }
+
+  .btn{
+    background-color: var(--primary-colour);
+    color: var(--text-colour);
+    padding: var(--spacing-md);
+  }
