@@ -273,9 +273,9 @@ body {
 }
 
 :root {
-  --primary-colour: #($primary-700);
-  --text-colour: #($primary-100);
-  --spacing-md: #($spacing-md);
+  --primary-colour: #1E276B;
+  --text-colour: #DAE9FB;
+  --spacing-md: 16px;
 }/*# sourceMappingURL=style.css.map */
 
 .btn{

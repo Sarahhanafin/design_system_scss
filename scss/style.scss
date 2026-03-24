@@ -233,7 +233,7 @@ body {
   }
 
   :root{
-    --primary-colour: #($primary-700);
-    --text-colour: #($primary-100);
-    --spacing-md: #($spacing-md);
+    --primary-colour: #{$primary-700};
+    --text-colour: #{$primary-100};
+    --spacing-md: #{$spacing-md};
   }
