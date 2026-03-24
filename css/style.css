@@ -275,9 +275,11 @@ body {
 :root {
   --primary-colour: #($primary-700);
   --text-colour: #($primary-100);
+  --spacing-md: #($spacing-md);
 }/*# sourceMappingURL=style.css.map */
 
-.btn.large{
-  background-color: var(--primary-colour);
-  color: var(--text-colour);
+.btn{
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: var(--spacing-md);
 }
