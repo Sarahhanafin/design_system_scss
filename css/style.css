@@ -270,4 +270,14 @@ body {
 }
 .spacing-container .spacing-xl {
   height: 64px;
+}
+
+:root {
+  --primary-colour: #($primary-700);
+  --text-colour: #($primary-100);
 }/*# sourceMappingURL=style.css.map */
+
+.btn.large{
+  background-color: var(--primary-colour);
+  color: var(--text-colour);
+}
