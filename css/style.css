@@ -279,7 +279,7 @@ body {
 }/*# sourceMappingURL=style.css.map */
 
 .btn{
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--primary-colour);
+  color: var(--text-colour);
   padding: var(--spacing-md);
 }
