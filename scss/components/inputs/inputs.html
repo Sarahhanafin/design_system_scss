@@ -16,3 +16,123 @@
       <li><a href="inputs.html">Inputs</a></li>
     </ul>
 </head>
+
+<body>
+    <section class="inputs">
+      <h1>Inputs</h1>
+  
+      <!-- Date -->
+      <div class="input-group">
+        <label for="date">Date</label>
+        <div class="input-wrapper">
+          <span class="icon icon-calendar"></span>
+          <input id="date" type="text" placeholder="DD/MM/YY" />
+        </div>
+      </div>
+  
+      <!-- Search -->
+      <div class="input-group">
+        <label for="search">Search</label>
+        <div class="input-wrapper">
+          <span class="icon icon-search"></span>
+          <input id="search" type="search" placeholder="Search" />
+        </div>
+      </div>
+  
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email</label>
+        <div class="input-wrapper">
+          <span class="icon icon-email"></span>
+          <input id="email" type="email" placeholder="example@email.com" />
+        </div>
+      </div>
+  
+      <!-- Phone -->
+      <div class="input-group">
+        <label for="phone">Phone</label>
+        <div class="input-wrapper">
+          <span class="icon icon-phone"></span>
+          <input id="phone" type="tel" placeholder="+353 00000000" />
+        </div>
+      </div>
+  
+      <!-- Number with +/- -->
+      <div class="input-group">
+        <label for="quantity">Quantity</label>
+        <div class="input-wrapper">
+          <button type="button" class="icon icon-minus" aria-label="Decrease"></button>
+          <input id="quantity" type="number" placeholder="000" />
+          <button type="button" class="icon icon-plus" aria-label="Increase"></button>
+        </div>
+      </div>
+  
+      <!-- Time -->
+      <div class="input-group">
+        <label for="time">Time</label>
+        <div class="input-wrapper">
+          <span class="icon icon-clock"></span>
+          <input id="time" type="text" placeholder="00:00" />
+        </div>
+      </div>
+  
+      <!-- Password (visible icon) -->
+      <div class="input-group">
+        <label for="password-visible">Password</label>
+        <div class="input-wrapper">
+          <input id="password-visible" type="password" placeholder="----------" />
+          <button type="button" class="icon icon-eye" aria-label="Show password"></button>
+        </div>
+      </div>
+  
+      <!-- Eircode -->
+      <div class="input-group">
+        <label for="eircode">Eircode</label>
+        <div class="input-wrapper">
+          <span class="icon icon-location"></span>
+          <input id="eircode" type="text" placeholder="Eircode" />
+        </div>
+      </div>
+  
+      <!-- Password (hidden icon) -->
+      <div class="input-group">
+        <label for="password-hidden">Password</label>
+        <div class="input-wrapper">
+          <input id="password-hidden" type="password" placeholder="----------" />
+          <button type="button" class="icon icon-eye-off" aria-label="Hide password"></button>
+        </div>
+      </div>
+  
+      <!-- URL -->
+      <div class="input-group">
+        <label for="url">URL</label>
+        <div class="input-wrapper">
+          <span class="icon icon-link"></span>
+          <input id="url" type="url" placeholder="URL" />
+        </div>
+      </div>
+  
+      <!-- URL with error -->
+      <div class="input-group has-error">
+        <label for="url-error">URL</label>
+        <div class="input-wrapper">
+          <span class="icon icon-link"></span>
+          <input id="url-error" type="url" placeholder="URL" />
+          <span class="icon icon-warning" aria-hidden="true"></span>
+        </div>
+        <p class="error-message">Error Message</p>
+      </div>
+  
+      <!-- Disabled URL -->
+      <div class="input-group is-disabled">
+        <label for="url-disabled">URL</label>
+        <div class="input-wrapper">
+          <span class="icon icon-link"></span>
+          <input id="url-disabled" type="url" placeholder="URL" disabled />
+        </div>
+        <p class="helper-text">Unavailable Input</p>
+      </div>
+  
+    </section>
+  </body>
+  </html>
