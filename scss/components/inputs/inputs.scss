@@ -1,8 +1,25 @@
 @use '../../foundations/index' as *;
 
-// -----------------------------
-// INPUT GROUP
-// -----------------------------
+
+
+@media (max-width: 900px) {
+    .inputs-grid {
+      grid-template-columns: repeat(2, 1fr); // 2 columns
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .inputs-grid {
+      grid-template-columns: 1fr; // 1 column on mobile
+    }
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 columns
+    gap: 20px;
+  }
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -40,9 +57,7 @@
       }
     }
   
-    // -----------------------------
-    // INPUT WRAPPER
-    // -----------------------------
+
     .input-wrapper {
       display: flex;
       align-items: center;
@@ -92,9 +107,7 @@
         }
       }
   
-      // -----------------------------
-      // NUMBER INPUT (+/-)
-      // -----------------------------
+   
       & > button.icon-minus,
       & > button.icon-plus {
         font-size: 18px;
@@ -119,9 +132,7 @@
     }
   }
   
-  // -----------------------------
-  // PASSWORD VISIBILITY ICON
-  // -----------------------------
+ 
   .icon-eye,
   .icon-eye-off {
     cursor: pointer;
