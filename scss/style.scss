@@ -1,5 +1,7 @@
 @use 'foundations/index' as *;
 @use 'components/buttons/button';
+@use 'components/icons/icons';
+@use 'components/inputs/inputs';
 
 /* ==================================================
    MIXINS
@@ -272,6 +274,11 @@ body {
   .button-group-outline {
     margin-top: 32px;
   }
+
+  /* ======================
+     Icons
+  ====================== */
+
 i.icon{
   width: 30px;
   height: 30px;
