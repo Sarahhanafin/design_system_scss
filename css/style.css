@@ -277,9 +277,3 @@ body {
   --text-colour: #DAE9FB;
   --spacing-md: 16px;
 }/*# sourceMappingURL=style.css.map */
-
-.btn{
-  background-color: var(--primary-colour);
-  color: var(--text-colour);
-  padding: var(--spacing-md);
-}
