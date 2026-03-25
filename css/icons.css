@@ -8,5 +8,5 @@ i.icon {
 }
 
 i.icon-home {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 27'%3E%3Cpath d='M1 12.1455V25.3455H10V18.1455H16.3V25.3455H25V12.1455L12.7 1.34546L1 12.1455Z' stroke='%23000632' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 27'%3E%3Cpath d='M1 12.1455V25.3455H10V18.1455H16.3V25.3455H25V12.1455L12.7 1.34546L1 12.1455Z' fill='none' stroke='%23000632' stroke-width='2'/%3E%3C/svg%3E");
 }/*# sourceMappingURL=icons.css.map */
