@@ -79,4 +79,35 @@
   background-color: #E6E6E6;
   color: #FAFAFA;
   border-color: #E6E6E6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+.page-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.button-column h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }/*# sourceMappingURL=button.css.map */
