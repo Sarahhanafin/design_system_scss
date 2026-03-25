@@ -27,3 +27,8 @@ ul {
     color: var(--text-colour);
     padding: var(--spacing-md);
   }
+
+  .code{
+    border: none;
+    background-color: #eee;
+  }
