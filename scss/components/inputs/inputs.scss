@@ -59,8 +59,9 @@
   
 
     .input-wrapper {
-        display: block;           // Change flex to block so input takes full width
-        position: relative;       // Needed for absolute icon
+        position: relative; // needed for absolute icon
+        display: block;
+        width: 100%;
         border: 1px solid #ccc;
         border-radius: 6px;
         background: #fff;
@@ -68,15 +69,22 @@
       
         input {
           width: 100%;
+          padding-right: 30px; // space for icon
           border: none;
           outline: none;
           font-size: 14px;
-          padding-right: 30px;   // Space for the icon on the right
-      
-          &::placeholder {
-            color: #b5b5b5;
-          }
         }
+      
+        .icon {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 16px;
+          color: #7a7a7a;
+          pointer-events: none; // optional, prevents blocking input clicks
+        }
+      }
       
         .icon {
           position: absolute;
@@ -101,7 +109,7 @@
             opacity: 0.7;
           }
         }
-    }
+    
    
       & > button.icon-minus,
       & > button.icon-plus {

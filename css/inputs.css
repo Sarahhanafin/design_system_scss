@@ -47,8 +47,9 @@
   cursor: not-allowed;
 }
 .input-group .input-wrapper {
-  display: block;
   position: relative;
+  display: block;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 6px;
   background: #fff;
@@ -56,13 +57,10 @@
 }
 .input-group .input-wrapper input {
   width: 100%;
+  padding-right: 30px;
   border: none;
   outline: none;
   font-size: 14px;
-  padding-right: 30px;
-}
-.input-group .input-wrapper input::placeholder {
-  color: #b5b5b5;
 }
 .input-group .input-wrapper .icon {
   position: absolute;
@@ -71,9 +69,18 @@
   transform: translateY(-50%);
   font-size: 16px;
   color: #7a7a7a;
+  pointer-events: none;
+}
+.input-group .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #7a7a7a;
   cursor: pointer;
 }
-.input-group .input-wrapper button.icon {
+.input-group button.icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +89,7 @@
   cursor: pointer;
   padding: 0;
 }
-.input-group .input-wrapper button.icon:hover {
+.input-group button.icon:hover {
   opacity: 0.7;
 }
 .input-group > button.icon-minus, .input-group > button.icon-plus {
