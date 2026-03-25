@@ -1,5 +1,6 @@
 @use '../../foundations/index' as *;
 
+
 .btn {
   font-family: inherit;
   font-weight: 600;
@@ -12,11 +13,11 @@
   justify-content: center;
   text-align: center;
 
-  
+
   &.small {
     min-width: 136px;
     padding: 8px 16px;
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   &.medium {
@@ -28,108 +29,74 @@
   &.large {
     min-width: 230px;
     padding: 14px 28px;
-    font-size: 24px; 
+    font-size: 24px;
   }
 
-  // PRIMARY FILLED
+  
   &.btn-primary {
     background-color: $primary-700;
     color: $neutral-100;
 
     &:hover:not(:disabled) {
-      background-color: $primary-500;
+      background-color: $primary-900;
     }
   }
 
-  // SECONDARY FILLED
   &.btn-secondary {
-    background-color:$secondary-700;
-    color: #FAFAFA;
-
-    &:hover:not(:disabled) {
-      background-color: $secondary-700;
-    }
-  }
-
-  // ERROR / MUTED FILLED
-  &.btn-error {
-    background-color:$neutral-500;
+    background-color: $secondary-700;
     color: $neutral-100;
 
     &:hover:not(:disabled) {
-      background-color: $neutral-300;
+      background-color: $secondary-900;
     }
   }
 
-  // OUTLINE PRIMARY
+  &.btn-error {
+    background-color: $neutral-500;
+    color: $neutral-100;
+
+    &:hover:not(:disabled) {
+      background-color: $neutral-700;
+    }
+  }
+
+  
   &.btn-outline-primary {
     background-color: transparent;
     border-color: $primary-700;
     color: $primary-700;
 
     &:hover:not(:disabled) {
-      background-color: $neutral-500;
+      background-color: rgba($primary-700, 0.08);
     }
   }
 
-  // OUTLINE SECONDARY
   &.btn-outline-secondary {
     background-color: transparent;
     border-color: $secondary-700;
     color: $secondary-700;
 
     &:hover:not(:disabled) {
-      background-color: $neutral-500;
+      background-color: rgba($secondary-700, 0.08);
     }
   }
 
-  // OUTLINE ERROR / MUTED
   &.btn-outline-error {
     background-color: transparent;
     border-color: $neutral-500;
     color: $neutral-500;
 
     &:hover:not(:disabled) {
-      background-color: $neutral-300;
+      background-color: rgba($neutral-500, 0.08);
     }
   }
+
 
   &:disabled {
     opacity: 1;
     cursor: not-allowed;
     background-color: $neutral-300;
-    color:$neutral-100;
+    color: $neutral-100;
     border-color: $neutral-300;
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 32px;
-}
-
-.page-title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 48px;
-}
-
-.buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
-  align-items: start;
-}
-
-.button-column {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.button-column h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 8px;
 }
