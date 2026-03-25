@@ -272,7 +272,12 @@ body {
   .button-group-outline {
     margin-top: 32px;
   }
+i.icon{
+  width: 30px;
+  height: 30px;
+  display: block;
+}
 
   i.icon1{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6 10l-3-3 1-1 2 2 5-5 1 1z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 44' fill='none' d='M1 19.8268V42.3768H15.625V30.0768H25.8625V42.3768H40V19.8268L20.0125 1.37677L1 19.8268Z' stroke='#000632' stroke-width='2'/%3E%3C/svg%3E");
   }
