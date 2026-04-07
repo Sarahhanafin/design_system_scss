@@ -1,6 +1,16 @@
 /*Primary Colours*/
 /*Secondary Colours*/
 /*Neutral Colours*/
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
 i.icon {
   width: 30px;
   height: 30px;
