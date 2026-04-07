@@ -37,6 +37,7 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     background: #fff;
+    box-sizing: border-box; /* <- important */
     padding: 10px 12px;
   }
 
