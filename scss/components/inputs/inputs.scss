@@ -1,142 +1,121 @@
 @use '../../foundations/index' as *;
 
-
-
 @media (max-width: 900px) {
-    .inputs-grid {
-      grid-template-columns: repeat(2, 1fr); // 2 columns
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .inputs-grid {
-      grid-template-columns: 1fr; // 1 column on mobile
-    }
-  }
-
   .inputs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 columns
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 600px) {
+  .inputs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 280px;
-  
-    label {
-      font-size: 14px;
-      font-weight: 500;
-    }
-  
-    &.has-error {
-      .input-wrapper {
-        border: 1px solid #d9534f;
-  
-        .icon-warning {
-          color: #d9534f;
-        }
-      }
-  
-      .error-message {
-        font-size: 12px;
-        color: #d9534f;
-        margin: 0;
-      }
-    }
-  
-    &.is-disabled {
-      opacity: 0.6;
-  
-      input {
-        background: #f5f5f5;
-        color: #999;
-        cursor: not-allowed;
-      }
-    }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 280px;
 
-    .input-wrapper {
-        position: relative; // needed for absolute icon
-        display: block;
-        width: 100%;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        background: #fff;
-        padding: 10px 12px;
-      
-        input {
-          width: 100%;
-          padding-right: 30px; // space for icon
-          border: none;
-          outline: none;
-          font-size: 14px;
-        }
-      
-        .icon {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 16px;
-          color: #7a7a7a;
-          pointer-events: none; // optional, prevents blocking input clicks
-        }
-      }
-      
-        .icon {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 16px;
-          color: #7a7a7a;
-          cursor: pointer;
-        }
-      
-        button.icon {            // Keep buttons flex as before
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-      
-          &:hover {
-            opacity: 0.7;
-          }
-        }
-    
-   
-      & > button.icon-minus,
-      & > button.icon-plus {
-        font-size: 18px;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      input[type="number"] {
-        text-align: center;
-        width: 60px;
-        -moz-appearance: textfield;
-  
-        &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-      }
-    }
-  
-  
- 
-  .icon-eye,
-  .icon-eye-off {
-    cursor: pointer;
+  label {
+    font-size: 14px;
+    font-weight: 500;
   }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    padding: 10px 12px;
+  }
+
+  .input-wrapper input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+  }
+
+  /* LEFT ICONS */
+  .input-wrapper > span.icon:first-child {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  /* RIGHT ICONS / BUTTONS */
+  .input-wrapper > button.icon,
+  .input-wrapper > span.icon:last-child {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  button.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.has-error {
+    .input-wrapper {
+      border: 1px solid #d9534f;
+    }
+
+    .error-message {
+      font-size: 12px;
+      color: #d9534f;
+      margin: 0;
+    }
+  }
+
+  &.is-disabled {
+    opacity: 0.6;
+
+    input {
+      background: #f5f5f5;
+      color: #999;
+      cursor: not-allowed;
+    }
+  }
+
+  input[type="number"] {
+    text-align: center;
+    flex: 0 0 60px;
+    width: 60px;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.icon-eye,
+.icon-eye-off {
+  cursor: pointer;
+}
