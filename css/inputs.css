@@ -45,25 +45,13 @@
   font-size: 14px;
   background: transparent;
 }
-.input-group {
-  /* LEFT ICONS */
-}
-.input-group .input-wrapper > span.icon:first-child {
+.input-group .input-wrapper > i.icon:first-child {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  pointer-events: none;
 }
-.input-group {
-  /* RIGHT ICONS / BUTTONS */
-}
-.input-group .input-wrapper > button.icon,
-.input-group .input-wrapper > span.icon:last-child {
+.input-group .input-wrapper > i.icon:last-child {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
 }
-.input-group button.icon {
+.input-group .icon-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,8 +59,9 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  flex-shrink: 0;
 }
-.input-group button.icon:hover {
+.input-group .icon-button:hover {
   opacity: 0.7;
 }
 .input-group.has-error .input-wrapper {
@@ -100,9 +89,4 @@
 .input-group input[type=number]::-webkit-inner-spin-button, .input-group input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.icon-eye,
-.icon-eye-off {
-  cursor: pointer;
 }/*# sourceMappingURL=inputs.css.map */
