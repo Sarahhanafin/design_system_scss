@@ -32,7 +32,7 @@
   .input-wrapper {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px, 10px, 10px,10px;
   }
   
   .input-wrapper input {
@@ -50,6 +50,11 @@
   input[type="date"] {
     padding: 0;
     -webkit-appearance: none;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    margin: 0;
+    padding: 0;
   }
 
   .input-wrapper > i.icon:first-child {
