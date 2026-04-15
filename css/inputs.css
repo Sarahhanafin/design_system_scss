@@ -59,7 +59,7 @@
 }
 .input-group .icon-button {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   background: none;
   border: none;
