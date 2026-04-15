@@ -35,8 +35,9 @@
   .input-wrapper {
     display: flex;
     align-items: center;
-    padding: 10px; // fixed
-    border: 1px solid #ccc;
+    gap: 8px;
+    padding: 10px; 
+    border: 1px solid #ccc; 
     border-radius: 6px;
     background: #fff;
   }
@@ -46,13 +47,14 @@
     -moz-appearance: none;
     appearance: none;
   
-    padding: 0;
+    padding: 0; 
     margin: 0;
     border: none;
     outline: none;
     background: transparent;
     flex: 1;
   }
+
   input[type="date"] {
     padding: 0;
     -webkit-appearance: none;
