@@ -11,6 +11,14 @@
     grid-template-columns: 1fr;
   }
 }
+.input-group .input-wrapper input {
+  width: 100%;
+  padding-right: 0px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
 .inputs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
