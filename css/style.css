@@ -255,7 +255,7 @@ i.icon-eye {
 }
 .input-group .input-wrapper input {
   width: 100%;
-  padding-right: 30px;
+  padding-right: 0px;
   border: none;
   outline: none;
   font-size: 14px;
