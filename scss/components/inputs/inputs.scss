@@ -35,7 +35,10 @@
   .input-wrapper {
     display: flex;
     align-items: center;
-    padding: 10px, 10px, 10px,10px;
+    padding: 10px; // fixed
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
   }
   
   .input-wrapper input {
