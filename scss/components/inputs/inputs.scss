@@ -14,6 +14,12 @@
   }
 }
 
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
 
 .inputs {
     padding: 40px;
@@ -94,4 +100,22 @@
   
   .input-group.is-disabled input {
     cursor: not-allowed;
+  }
+
+  /* ICON BUTTONS (for +, -, eye) */
+.icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 4px;
+    color: #2f3a56;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-button:hover {
+    opacity: 0.7;
   }
