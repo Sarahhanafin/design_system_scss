@@ -1,193 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Colours</title>
-    <link rel="stylesheet" type="text/css" href="../../../css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../../../css/webstyle.css"/>
-    <ul>
-      <li><a href="../../../index.html">Cover</a></li>
-      <li><a href="../../../docs/colours.html">Colours</a></li>
-      <li><a href="../../../docs/typography.html">Typography</a></li>
-      <li><a href="../../../docs/spacing.html">Spacing</a></li>
-      <li><a href="../buttons/button.html">Buttons</a></li>
-      <li><a href="inputs.html">Inputs</a></li>
-      <li><a href="../icons/icons.html">Icons</a></li>
-    </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inputs</title>
+
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/webstyle.css">
+  
 </head>
 
 <body>
-    <section class="inputs">
-        <h1>Inputs</h1>
-      
-        <div class="inputs-grid">
-      
 
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Date Selector</label>
-              <div class="input-wrapper">
-                <input id="date-input" type="text" placeholder="Select date" readonly>
-                <i id="calendar-btn" class="icon icon-calendar"></i>
-              </div>
-            </div>
-      
-            <textarea class="code" readonly>
+<!-- NAV -->
+<ul>
+  <li><a href="../../../index.html">Cover</a></li>
+  <li><a href="../../../docs/colours.html">Colours</a></li>
+  <li><a href="../../../docs/typography.html">Typography</a></li>
+  <li><a href="../../../docs/spacing.html">Spacing</a></li>
+  <li><a href="../buttons/button.html">Buttons</a></li>
+  <li><a href="inputs.html">Inputs</a></li>
+  <li><a href="../icons/icons.html">Icons</a></li>
+  <li><a href="../dropdowns/dropdown.html">Dropdown</a></li>
+</ul>
+
+<section class="inputs">
+
+  <h1>Inputs</h1>
+
+  <p>
+    Input boxes are used to collect information like names, emails, dates, and numbers.
+    Each input should have a label and clear states like error or disabled.
+    Use the shared design system classes to keep everything consistent.
+  </p>
+
+  <div class="inputs-grid">
+
+    <!-- ================= DATE ================= -->
+    <div class="field-block">
+
       <div class="input-group">
         <label>Date Selector</label>
-        <div class="input-wrapper">
-          <input type="text" placeholder="Select date" readonly>
-          <i class="icon icon-calendar"></i>
-        </div>
+
+       <div class="input-wrapper">
+  <input id="date-display" type="text" placeholder="Select date" readonly>
+  <i id="calendar-btn" class="icon icon-calendar"></i>
+  <input id="date-picker" type="date" class="date-hidden">
+</div>
       </div>
-            </textarea>
-          </div>
-      
- 
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Search</label>
-              <div class="input-wrapper">
-                <input type="search" placeholder="Search">
-                <i class="icon icon-search"></i>
-              </div>
-            </div>
-      
-            <textarea class="code" readonly>
+
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Date Selector</label>
+  <div class="input-wrapper">
+    <input type="text" placeholder="Select date" readonly>
+    <i class="icon icon-calendar"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= SEARCH ================= -->
+    <div class="field-block">
+
       <div class="input-group">
         <label>Search</label>
+
         <div class="input-wrapper">
           <input type="search" placeholder="Search">
           <i class="icon icon-search"></i>
         </div>
       </div>
-            </textarea>
-          </div>
-      
 
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Email</label>
-              <div class="input-wrapper">
-                <input type="email" placeholder="example@email.com">
-                <i class="icon icon-email"></i>
-              </div>
-            </div>
-      
-            <textarea class="code" readonly>
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Search</label>
+  <div class="input-wrapper">
+    <input type="search" placeholder="Search">
+    <i class="icon icon-search"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= EMAIL ================= -->
+    <div class="field-block">
+
       <div class="input-group">
         <label>Email</label>
+
         <div class="input-wrapper">
           <input type="email" placeholder="example@email.com">
           <i class="icon icon-email"></i>
         </div>
       </div>
-            </textarea>      
-          </div>
-      
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Phone</label>
-      
-              <div class="input-wrapper">
-                <input type="tel" placeholder="+353 00000000">
-                <i class="icon icon-phone"></i>
-              </div>
-            </div>
-      
-            <textarea class="code" readonly>
+
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Email</label>
+  <div class="input-wrapper">
+    <input type="email" placeholder="example@email.com">
+    <i class="icon icon-email"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= PHONE ================= -->
+    <div class="field-block">
+
       <div class="input-group">
         <label>Phone</label>
+
         <div class="input-wrapper">
           <input type="tel" placeholder="+353 00000000">
           <i class="icon icon-phone"></i>
         </div>
       </div>
-            </textarea>
-      
-          </div>
-      
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Time</label>
-      
-              <div class="input-wrapper">
-                <input type="text" placeholder="00:00">
-                <i class="icon icon-time"></i>
-              </div>
-            </div>
-      
-            <textarea class="code" readonly>
+
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Phone</label>
+  <div class="input-wrapper">
+    <input type="tel" placeholder="+353 00000000">
+    <i class="icon icon-phone"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= TIME ================= -->
+    <div class="field-block">
+
       <div class="input-group">
         <label>Time</label>
+
         <div class="input-wrapper">
           <input type="text" placeholder="00:00">
           <i class="icon icon-time"></i>
         </div>
       </div>
-            </textarea>
-      
-          </div>
-      
-          <div class="field-block">
-      
-            <div class="input-group">
-              <label>Password</label>
-      
-              <div class="input-wrapper">
-                <input type="password" placeholder="--------">
-                <i class="icon icon-eye"></i>
-              </div>
-            </div>
-      
-     <textarea class="code" readonly>
-     <div class="input-group">
-     <label>Password</label>
-     <div class="input-wrapper">
-     <input type="password" placeholder="--------">
-     <i class="icon icon-eye"></i>
-     </div>
-     </div>
-            </textarea>
-          </div>
-      
-          <div class="field-block">
 
-            <div class="input-group">
-              <label>Eircode</label>
-              <div class="input-wrapper">
-                <input type="text" placeholder="Eircode">
-                <i class="icon icon-location"></i>
-              </div>
-            </div>
-          
-            <textarea class="code" readonly>
-          <div class="input-group">
-            <label>Eircode</label>
-            <div class="input-wrapper">
-              <input type="text" placeholder="Eircode">
-              <i class="icon icon-location"></i>
-            </div>
-          </div>
-            </textarea>
-          </div>
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Time</label>
+  <div class="input-wrapper">
+    <input type="text" placeholder="00:00">
+    <i class="icon icon-time"></i>
+  </div>
+</div>
+      </textarea>
 
+    </div>
 
+    <!-- ================= PASSWORD ================= -->
+    <div class="field-block">
+
+      <div class="input-group">
+        <label>Password</label>
+
+        <div class="input-wrapper">
+          <input type="password" placeholder="--------">
+          <i class="icon icon-eye"></i>
+        </div>
+      </div>
+
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Password</label>
+  <div class="input-wrapper">
+    <input type="password" placeholder="--------">
+    <i class="icon icon-eye"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= EIRCODE ================= -->
+    <div class="field-block">
+
+      <div class="input-group">
+        <label>Eircode</label>
+
+        <div class="input-wrapper">
+          <input type="text" placeholder="Eircode">
+          <i class="icon icon-location"></i>
+        </div>
+      </div>
+
+      <textarea class="code" readonly>
+<div class="input-group">
+  <label>Eircode</label>
+  <div class="input-wrapper">
+    <input type="text" placeholder="Eircode">
+    <i class="icon icon-location"></i>
+  </div>
+</div>
+      </textarea>
+
+    </div>
+
+    <!-- ================= DISABLED ================= -->
     <div class="field-block">
 
       <div class="input-group is-disabled">
         <label>URL</label>
+
         <div class="input-wrapper">
           <input type="text" placeholder="Unavailable input" disabled>
           <i class="icon icon-link"></i>
         </div>
+
         <p class="helper-text">Unavailable Input</p>
       </div>
 
@@ -201,17 +229,20 @@
   <p class="helper-text">Unavailable Input</p>
 </div>
       </textarea>
+
     </div>
 
- 
+    <!-- ================= ERROR ================= -->
     <div class="field-block">
 
       <div class="input-group has-error">
         <label>URL</label>
+
         <div class="input-wrapper">
           <input type="text" placeholder="URL">
           <i class="icon icon-error"></i>
         </div>
+
         <p class="error-message">Error Message</p>
       </div>
 
@@ -225,23 +256,35 @@
   <p class="error-message">Error Message</p>
 </div>
       </textarea>
+
     </div>
 
+  </div>
+</section>
 
-        </div>
-      </section>
-      
-      <script>
-        const input = document.getElementById("date-input");
-        const icon = document.getElementById("calendar-btn");
-      
-        icon.addEventListener("click", () => {
-          if (input.showPicker) {
-            input.showPicker();
-          } else {
-            input.focus();
-          }
-        });
-      </script>
-  </body>
-  </html>
+<!-- ================= DATE SCRIPT ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const displayInput = document.getElementById("date-display");
+  const calendarBtn  = document.getElementById("calendar-btn");
+  const datePicker   = document.getElementById("date-picker");
+
+  calendarBtn.addEventListener("click", () => {
+    if (datePicker.showPicker) {
+      datePicker.showPicker();
+    } else {
+      datePicker.focus();
+    }
+  });
+
+  datePicker.addEventListener("change", () => {
+    if (datePicker.value) {
+      const [year, month, day] = datePicker.value.split("-");
+      displayInput.value = `${day}/${month}/${year}`;
+    }
+  });
+});
+</script>
+
+</body>
+</html>

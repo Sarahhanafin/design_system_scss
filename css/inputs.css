@@ -15,6 +15,8 @@
   display: grid;
   grid-template-columns: repeat(3, 280px);
   gap: 40px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* RESPONSIVE */
@@ -51,6 +53,10 @@
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #080808;
+  border-radius: 6px;
+  background: #fff;
 }
 
 /* =========================
@@ -115,6 +121,15 @@ input[type=date]::-webkit-clear-button {
   right: 0.75rem;
   cursor: pointer;
   color: #666;
+}
+
+.date-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  border: none;
 }
 
 /* =========================

@@ -7,17 +7,24 @@
    PAGE SPACING
 ========================= */
 .inputs {
-    padding: 40px;
-  }
+  padding: 40px;
+}
   
   /* =========================
      GRID
   ========================= */
-  .inputs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 280px);
-    gap: 40px;
-  }
+ .inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+.input-group,
+.input-wrapper,
+.code {
+  box-sizing: border-box;
+}
   
   /* RESPONSIVE */
   @media (max-width: 900px) {
@@ -51,11 +58,15 @@
      INPUT WRAPPER
   ========================= */
   .input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #080808;
+  border-radius: 6px;
+  background: #fff;
+}
   
   /* =========================
      INPUT FIELD (GLOBAL)
@@ -123,6 +134,15 @@
     cursor: pointer;
     color: #666;
   }
+
+  .date-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+}
   
   /* =========================
      BUTTON ICONS (optional)
