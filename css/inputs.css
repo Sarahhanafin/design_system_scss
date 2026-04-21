@@ -140,7 +140,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* DATE INPUT FIX */
 input[type=date] {
+  appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+/* Chrome / Safari / Edge */
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
