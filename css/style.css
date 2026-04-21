@@ -83,26 +83,13 @@
 }
 
 .icon {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
+  display: block;
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   flex-shrink: 0;
-}
-
-i.icon {
-  width: 30px;
-  height: 30px;
-  display: block;
-}
-
-.input-wrapper .icon-calendar {
-  position: absolute;
-  right: 0.75rem;
-  cursor: pointer;
-  color: #666;
 }
 
 .icons-grid {
@@ -110,18 +97,35 @@ i.icon {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.icons-grid .icon-item {
+
+.icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 12px;
 }
-.icons-grid .icon-item textarea.code {
+
+.icon-item .icon-calendar {
+  position: relative;
+  right: auto;
+  top: auto;
+}
+
+.icon-item .code {
+  display: block;
   width: 100%;
+  min-height: 60px;
   font-family: monospace;
   font-size: 0.85rem;
   resize: none;
   text-align: center;
+  box-sizing: border-box;
+}
+
+.icons-grid .icon-item .icon {
+  position: static !important;
+  margin: 0 auto;
 }
 
 i.icon-home {
@@ -228,7 +232,7 @@ i.icon-eye {
 ========================= */
 .inputs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   width: 100%;
 }
@@ -242,12 +246,12 @@ i.icon-eye {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .inputs-grid {
-    grid-template-columns: repeat(2, 280px);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
   .inputs-grid {
-    grid-template-columns: 280px;
+    grid-template-columns: 1fr;
   }
 }
 /* =========================
@@ -336,7 +340,7 @@ input[type=date]::-webkit-clear-button {
 }
 
 /* custom calendar icon */
-.icon-calendar {
+.input-wrapper .icon-calendar {
   position: absolute;
   right: 0.75rem;
   cursor: pointer;
@@ -707,5 +711,40 @@ body {
 }
 
 /* ======================
-  Inputs
-====================== *//*# sourceMappingURL=style.css.map */
+  Index
+====================== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 32px;
+}
+
+ol {
+  padding-left: 20px;
+}
+ol li {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+ol li b {
+  color: #020b4f;
+}/*# sourceMappingURL=style.css.map */
