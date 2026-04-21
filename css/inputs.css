@@ -1,22 +1,16 @@
 /*Primary Colours*/
 /*Secondary Colours*/
 /*Neutral Colours*/
-@media (max-width: 900px) {
-  .inputs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .inputs-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* PAGE SPACING */
+/* =========================
+   PAGE SPACING
+========================= */
 .inputs {
   padding: 40px;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .inputs-grid {
   display: grid;
   grid-template-columns: repeat(3, 280px);
@@ -34,7 +28,9 @@
     grid-template-columns: 280px;
   }
 }
-/* INPUT GROUP */
+/* =========================
+   INPUT GROUP
+========================= */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -42,40 +38,26 @@
   width: 100%;
 }
 
-/* LABEL */
 .input-group label {
   font-size: 14px;
   font-weight: 500;
 }
 
-/* INPUT WRAPPER (THE BOX) */
+/* =========================
+   INPUT WRAPPER
+========================= */
 .input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-}
-.input-wrapper input[type=date] {
   width: 100%;
-  padding-right: 2.5rem;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-}
-.input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  display: none;
-}
-.input-wrapper .icon-calendar {
-  position: absolute;
-  right: 0.75rem;
-  cursor: pointer;
-  pointer-events: auto;
-  color: #666;
 }
 
-/* INPUT FIELD */
+/* =========================
+   INPUT FIELD (GLOBAL)
+========================= */
 .input-wrapper input {
-  flex: 1;
+  width: 100%;
   min-width: 0;
   border: none;
   outline: none;
@@ -84,23 +66,57 @@
   color: #2f3a56;
   padding: 0;
   margin: 0;
-  appearance: none;
-  -webkit-appearance: none;
+  flex: 1;
 }
 
-/* PLACEHOLDER */
+/* placeholder */
 .input-wrapper input::placeholder {
   color: #8fa0c0;
 }
 
-/* ICONS */
+/* =========================
+   DATE INPUT FIX (IMPORTANT)
+========================= */
+.input-wrapper input[type=date] {
+  padding-right: 2.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+/* Hide native calendar icon (Chrome/Safari/Edge) */
+.input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* extra safety override */
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+/* =========================
+   ICON
+========================= */
 .icon {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
-/* BUTTONS (for +, -, eye) */
+/* custom calendar icon */
+.icon-calendar {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* =========================
+   BUTTON ICONS (optional)
+========================= */
 .icon-button {
   border: none;
   background: none;
@@ -111,7 +127,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #2f3a56;
   flex-shrink: 0;
 }
 
@@ -119,16 +134,10 @@
   opacity: 0.7;
 }
 
-/* GROUPED ACTIONS (quantity input) */
-.input-actions {
-  display: flex;
-  gap: 4px;
-}
-
-/* FIX NUMBER INPUT */
+/* =========================
+   NUMBER INPUT FIX
+========================= */
 input[type=number] {
-  flex: 1;
-  min-width: 0;
   -moz-appearance: textfield;
 }
 
@@ -138,22 +147,9 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input[type=date] {
-  width: 100%;
-  padding-right: 2.5rem;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-}
-
-/* Hide Chrome / Safari / Edge calendar icon */
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  display: none;
-  -webkit-appearance: none;
-}
-
-/* ERROR STATE */
+/* =========================
+   STATES
+========================= */
 .input-group.has-error .input-wrapper {
   border-color: red;
 }
@@ -163,7 +159,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: red;
 }
 
-/* DISABLED STATE */
 .input-group.is-disabled {
   opacity: 0.5;
 }
