@@ -28,29 +28,31 @@
         </br>
 
         <div class="dropdown">
-            <button class="dropdown__toggle">
-              Select an item
-              <span class="dropdown__arrow"></span>
+            <button class="dropdown__toggle" id="dropdownBtn">
+              Select an option <span class="arrow">▾</span>
             </button>
           
-            <ul class="dropdown__menu">
-              <li class="dropdown__item">Select an item</li>
-              <li class="dropdown__item dropdown__item--active">Item 1</li>
-              <li class="dropdown__item">Item 2</li>
-              <li class="dropdown__item">Item 3</li>
-              <li class="dropdown__item">Item 4</li>
-              <li class="dropdown__item">Item 5</li>
-              <li class="dropdown__item">Item 6</li>
+            <ul class="dropdown__menu" id="dropdownMenu">
+              <li class="dropdown__item">Profile</li>
+              <li class="dropdown__item">Settings</li>
+              <li class="dropdown__item">Notifications</li>
+              <li class="dropdown__item">Logout</li>
             </ul>
           </div>
-
-          <script>
-            const dropdown = document.querySelector(".dropdown");
-            const toggle = document.querySelector(".dropdown__toggle");
           
-            toggle.addEventListener("click", () => {
-              dropdown.classList.toggle("is-open");
+          <script>
+            const btn = document.getElementById('dropdownBtn');
+            const menu = document.getElementById('dropdownMenu');
+          
+            btn.addEventListener('click', () => {
+              menu.classList.toggle('open');
+            });
+          
+            document.addEventListener('click', (e) => {
+              if (!e.target.closest('.dropdown')) {
+                menu.classList.remove('open');
+              }
             });
           </script>
-
+          
 </body>
