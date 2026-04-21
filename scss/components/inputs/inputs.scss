@@ -15,10 +15,22 @@
 }
 
 .input-wrapper {
+    width: 100%;
+    height: 44px; 
+    padding: 0 12px;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
+  
+    border: 1px solid #2f3a56;
+    border-radius: 4px;
+    background: #fff;
+  }
+
+  .input-wrapper input {
+    flex: 1;
+    min-width: 0; // prevents overflow bugs
   }
 
 .inputs {
@@ -27,7 +39,7 @@
   
   .inputs-grid {
     display: grid;
-    grid-template-columns: repeat(3, 280px);
+    grid-template-columns: repeat(3, 280px); 
     gap: 40px;
   }
   
@@ -35,6 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%; 
   }
   
   /* LABEL */
@@ -119,3 +132,14 @@
   .icon-button:hover {
     opacity: 0.7;
   }
+
+  .icon,
+.icon-button {
+  flex-shrink: 0;
+}
+
+input[type="number"] {
+    width: 60px;     // fixed width like your design
+    text-align: left;
+  }
+
