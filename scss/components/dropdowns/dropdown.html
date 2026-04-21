@@ -28,31 +28,42 @@
         </br>
 
         <div class="dropdown">
-            <button class="dropdown__toggle" id="dropdownBtn">
-              Select an option <span class="arrow">▾</span>
+            <button class="dropdown__toggle" type="button">
+              <span class="dropdown__label">SELECT</span>
+              <span class="dropdown__icon" aria-hidden="true"></span>
             </button>
           
-            <ul class="dropdown__menu" id="dropdownMenu">
-              <li class="dropdown__item">Profile</li>
-              <li class="dropdown__item">Settings</li>
-              <li class="dropdown__item">Notifications</li>
-              <li class="dropdown__item">Logout</li>
+            <ul class="dropdown__menu">
+              <li><button type="button">Option One</button></li>
+              <li><button type="button">Option Two</button></li>
+              <li><button type="button">Option Three</button></li>
             </ul>
           </div>
-          
+
           <script>
-            const btn = document.getElementById('dropdownBtn');
-            const menu = document.getElementById('dropdownMenu');
+            const dropdown = document.querySelector(".dropdown");
+            const toggle = dropdown.querySelector(".dropdown__toggle");
+            const label = dropdown.querySelector(".dropdown__label");
+            const options = dropdown.querySelectorAll(".dropdown__menu button");
           
-            btn.addEventListener('click', () => {
-              menu.classList.toggle('open');
+            toggle.addEventListener("click", () => {
+              dropdown.classList.toggle("is-open");
             });
           
-            document.addEventListener('click', (e) => {
-              if (!e.target.closest('.dropdown')) {
-                menu.classList.remove('open');
+            options.forEach(option => {
+              option.addEventListener("click", () => {
+                label.textContent = option.textContent;
+                dropdown.classList.remove("is-open");
+              });
+            });
+          
+            document.addEventListener("click", e => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove("is-open");
               }
             });
           </script>
+          
+         
           
 </body>
