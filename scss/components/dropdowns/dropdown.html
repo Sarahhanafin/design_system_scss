@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Colours</title>
+    <title>Dropdowns</title>
     <link rel="stylesheet" type="text/css" href="../../../css/style.css"/>
     <link rel="stylesheet" type="text/css" href="../../../css/webstyle.css"/>
     <ul>
@@ -16,55 +16,102 @@
       <li><a href="../inputs/inputs.html">Inputs</a></li>
       <li><a href="../icons/icons.html">Icons</a></li>
       <li><a href="dropdown.html">Dropdown</a></li>
+      <li><a href="../messages/message.html">Message</a></li>
+      <li><a href="../check/check.html">Checkboxes</a></li>
     </ul>
 </head>
 
 <body>
 
-    <h1>Dropdown</h1>
-    
-    <p>...</p>
+  <h1>Dropdown</h1>
+  <p>Dropdown menus are used to let users choose one option from a list in a compact way. They are helpful when
+     there are multiple choices but you want to save space, such as selecting a country or category.
+      In this design system, you can simply copy and paste the provided HTML into your project and apply the correct
+       classes for the dropdown. As long as you include the design system stylesheet, the dropdown will automatically
+        be styled and function correctly.
+  </p>
 
-        </br>
 
-        <div class="dropdown">
-            <button class="dropdown__toggle" type="button">
-              <span class="dropdown__label">SELECT</span>
-              <span class="dropdown__caret"></span>
-            </button>
-          
-            <div class="dropdown__menu">
-              <button type="button">Option One</button>
-              <button type="button">Option Two</button>
-              <button type="button">Option Three</button>
-            </div>
+    <div class="dropdowns">
+      <div class="dropdown-grid">
+        <div class="dropdown-group">
+          <label for="dropdown-default">Select option</label>
+
+          <div class="dropdown-wrapper">
+            <select id="dropdown-default" class="dropdown-select">
+              <option value="" selected disabled>Select</option>
+              <option value="option-1">Option 1</option>
+              <option value="option-2">Option 2</option>
+              <option value="option-3">Option 3</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
           </div>
+        </div>
 
-          <script>
-            const dropdown = document.querySelector(".dropdown");
-            const toggle = dropdown.querySelector(".dropdown__toggle");
-            const label = dropdown.querySelector(".dropdown__label");
-            const options = dropdown.querySelectorAll(".dropdown__menu button");
-          
-            toggle.addEventListener("click", () => {
-              dropdown.classList.toggle("is-open");
-            });
-          
-            options.forEach((option) => {
-              option.addEventListener("click", () => {
-                label.textContent = option.textContent;
-                dropdown.classList.remove("is-open");
-              });
-            });
-          
-            document.addEventListener("click", (e) => {
-              if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove("is-open");
-              }
-            });
-          </script>
-          
-          
-         
-          
-</body>
+        <textarea class="code" readonly>  <div class="dropdown-group">
+          <label for="dropdown-default">Select option</label>
+
+          <div class="dropdown-wrapper">
+            <select id="dropdown-default" class="dropdown-select">
+              <option value="" selected disabled>Select</option>
+              <option value="option-1">Option 1</option>
+              <option value="option-2">Option 2</option>
+              <option value="option-3">Option 3</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </div>
+        </div> </textarea>
+
+        <div class="dropdown-group">
+          <label for="dropdown-filled">Choose item</label>
+
+          <div class="dropdown-wrapper">
+            <select id="dropdown-filled" class="dropdown-select">
+              <option value="" disabled>Choose item</option>
+              <option value="item-1" selected>Item 1</option>
+              <option value="item-2">Item 2</option>
+              <option value="item-3">Item 3</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+
+         <textarea class="code" readonly> <div class="dropdown-wrapper">
+            <select id="dropdown-filled" class="dropdown-select">
+              <option value="" disabled>Choose item</option>
+              <option value="item-1" selected>Item 1</option>
+              <option value="item-2">Item 2</option>
+              <option value="item-3">Item 3</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </div>
+        </div> </textarea>
+
+        <div class="dropdown-group">
+          <label for="dropdown-disabled">Disabled</label>
+
+          <div class="dropdown-wrapper is-disabled">
+            <select id="dropdown-disabled" class="dropdown-select" disabled>
+              <option selected>Disabled</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+
+         <textarea class="code" readonly>  <div class="dropdown-group">
+          <label for="dropdown-disabled">Disabled</label>
+
+          <div class="dropdown-wrapper is-disabled">
+            <select id="dropdown-disabled" class="dropdown-select" disabled>
+              <option selected>Disabled</option>
+            </select>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </div>
+        </div> </textarea>
+
+      </div>
+    </div>
+
+ 
+
+  </body>

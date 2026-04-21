@@ -13,9 +13,16 @@
   /* =========================
      GRID
   ========================= */
- .inputs-grid {
+//  .inputs-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+//   gap: 40px;
+//   width: 100%;
+// }
+
+.inputs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   width: 100%;
 }
@@ -27,17 +34,17 @@
 }
   
   /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .inputs-grid {
-      grid-template-columns: repeat(2, 280px);
-    }
+ @media (max-width: 900px) {
+  .inputs-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (max-width: 600px) {
-    .inputs-grid {
-      grid-template-columns: 280px;
-    }
+}
+
+@media (max-width: 600px) {
+  .inputs-grid {
+    grid-template-columns: 1fr;
   }
+}
   
   /* =========================
      INPUT GROUP
@@ -128,9 +135,9 @@
   }
   
   /* custom calendar icon */
-  .icon-calendar {
-    position: absolute;
-    right: 0.75rem;
+ .input-wrapper .icon-calendar {
+  position: absolute;
+  right: 0.75rem;
     cursor: pointer;
     color: #666;
   }

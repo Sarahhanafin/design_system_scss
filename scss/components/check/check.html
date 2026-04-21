@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colours</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/webstyle.css"/>
+    <ul>
+      <li><a href="../../../index.html">Cover</a></li>
+      <li><a href="../../../docs/colours.html">Colours</a></li>
+      <li><a href="../../../docs/typography.html">Typography</a></li>
+      <li><a href="../../../docs/spacing.html">Spacing</a></li>
+      <li><a href="../buttons/button.html">Buttons</a></li>
+      <li><a href="../inputs/inputs.html">Inputs</a></li>
+      <li><a href="../icons/icons.html">Icons</a></li>
+      <li><a href="../dropdowns/dropdown.html">Dropdown</a></li>
+      <li><a href="../messages/message.html">Message</a></li>
+      <li><a href="check.html">Checkboxes</a></li>
+    </ul>
+</head>
+
+<body>
+<h1>Checkboxes & Radio Buttons</h1>
+
+ <p>
+  Checkboxes and radio buttons are used to let users make choices in a form. 
+  Checkboxes allow users to select one or more options, while radio buttons let users choose only one option from a group. 
+  In this design system, you can simply copy and paste the HTML example you need into your project and apply the correct classes, 
+  such as <code>control--checkbox</code> or <code>control--radio</code>. You can also add size classes like 
+  <code>control--sm</code>, <code>control--md</code>, <code>control--lg</code>, or <code>control--xl</code>. 
+  For radio buttons, make sure all options in the same group share the same <code>name</code> attribute so only one can be selected. 
+  As long as the design system stylesheet is included, the components will automatically be styled and work correctly.
+</p>
+  </section>
+
+  <section class="check-grid">
+
+    <div class="check-group">
+      <h2 class="check-group__title">Checkboxes</h2>
+
+      <h3>Small Checkbox</h3>
+      <label class="control control--checkbox control--sm">
+        <span class="control__label">Small Checkbox</span>
+        <input type="checkbox" />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--checkbox control--sm">
+  <span class="control__label">Small Checkbox</span>
+  <input type="checkbox" />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Medium Checkbox</h3>
+      <label class="control control--checkbox control--md">
+        <span class="control__label">Medium Checkbox</span>
+        <input type="checkbox" checked />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--checkbox control--md">
+  <span class="control__label">Medium Checkbox</span>
+  <input type="checkbox" checked />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Large Checkbox</h3>
+      <label class="control control--checkbox control--lg">
+        <span class="control__label">Large Checkbox</span>
+        <input type="checkbox" />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--checkbox control--lg">
+  <span class="control__label">Large Checkbox</span>
+  <input type="checkbox" />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Extra Large Checkbox</h3>
+      <label class="control control--checkbox control--xl">
+        <span class="control__label">Extra Large Checkbox</span>
+        <input type="checkbox" checked />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--checkbox control--xl">
+  <span class="control__label">Extra Large Checkbox</span>
+  <input type="checkbox" checked />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Disabled Checkbox</h3>
+      <label class="control control--checkbox control--md control--disabled">
+        <span class="control__label">Disabled Checkbox</span>
+        <input type="checkbox" disabled />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--checkbox control--md control--disabled">
+  <span class="control__label">Disabled Checkbox</span>
+  <input type="checkbox" disabled />
+  <span class="control__box"></span>
+</label></textarea>
+    </div>
+
+    <div class="check-group">
+      <h2 class="check-group__title">Radio Buttons</h2>
+
+      <h3>Small Radio</h3>
+      <label class="control control--radio control--sm">
+        <span class="control__label">Small Radio</span>
+        <input type="radio" name="radio-demo-1" />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--radio control--sm">
+  <span class="control__label">Small Radio</span>
+  <input type="radio" name="radio-demo-1" />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Medium Radio</h3>
+      <label class="control control--radio control--md">
+        <span class="control__label">Medium Radio</span>
+        <input type="radio" name="radio-demo-2" checked />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--radio control--md">
+  <span class="control__label">Medium Radio</span>
+  <input type="radio" name="radio-demo-2" checked />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Large Radio</h3>
+      <label class="control control--radio control--lg">
+        <span class="control__label">Large Radio</span>
+        <input type="radio" name="radio-demo-3" />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--radio control--lg">
+  <span class="control__label">Large Radio</span>
+  <input type="radio" name="radio-demo-3" />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Extra Large Radio</h3>
+      <label class="control control--radio control--xl">
+        <span class="control__label">Extra Large Radio</span>
+        <input type="radio" name="radio-demo-4" checked />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--radio control--xl">
+  <span class="control__label">Extra Large Radio</span>
+  <input type="radio" name="radio-demo-4" checked />
+  <span class="control__box"></span>
+</label></textarea>
+
+      <h3>Disabled Radio</h3>
+      <label class="control control--radio control--md control--disabled">
+        <span class="control__label">Disabled Radio</span>
+        <input type="radio" name="radio-demo-5" disabled />
+        <span class="control__box"></span>
+      </label>
+      <textarea class="code" readonly><label class="control control--radio control--md control--disabled">
+  <span class="control__label">Disabled Radio</span>
+  <input type="radio" name="radio-demo-5" disabled />
+  <span class="control__box"></span>
+</label></textarea>
+    </div>
+
+  </section>
+
+
+</body>

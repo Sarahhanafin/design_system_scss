@@ -1,0 +1,175 @@
+@use '../../foundations/index' as *;
+
+body {
+  margin: 0;
+  padding: 48px 64px;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+h1 {
+  margin: 0 0 56px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.tokens {
+  background: #fff;
+}
+
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 420px));
+  gap: 80px;
+  align-items: start;
+}
+
+.check-group {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  &__title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.control {
+  --control-size: 32px;
+  --label-size: 32px;
+  --border-color: #6f8fc8;
+  --active-color: #6f8fc8;
+  --disabled-color: #bdbdbd;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__label {
+    font-size: var(--label-size);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  &__box {
+    width: var(--control-size);
+    height: var(--control-size);
+    border: 2px solid var(--border-color);
+    background: transparent;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  /* Checkbox shape */
+  &--checkbox {
+    .control__box {
+      border-radius: 6px;
+    }
+
+    input:checked + .control__box {
+      background: var(--active-color);
+      border-color: var(--active-color);
+    }
+
+    input:checked + .control__box::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      width: 28%;
+      height: 58%;
+      border: solid #fff;
+      border-width: 0 4px 4px 0;
+      transform: translate(-50%, -58%) rotate(45deg);
+      box-sizing: border-box;
+    }
+  }
+
+  /* Radio shape */
+  &--radio {
+    .control__box {
+      border-radius: 50%;
+    }
+
+    input:checked + .control__box {
+      border-color: var(--active-color);
+    }
+
+    input:checked + .control__box::after {
+      content: "";
+      position: absolute;
+      inset: 22%;
+      border-radius: 50%;
+      background: var(--active-color);
+    }
+  }
+
+  /* Sizes */
+  &--sm {
+    --control-size: 32px;
+    --label-size: 28px;
+  }
+
+  &--md {
+    --control-size: 36px;
+    --label-size: 30px;
+  }
+
+  &--lg {
+    --control-size: 46px;
+    --label-size: 34px;
+  }
+
+  &--xl {
+    --control-size: 58px;
+    --label-size: 42px;
+  }
+
+  /* Disabled */
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 1;
+
+    .control__label {
+      color: var(--disabled-color);
+    }
+
+    .control__box {
+      border-color: var(--disabled-color);
+      background: transparent;
+    }
+
+    input:checked + .control__box {
+      background: #d8d8d8;
+      border-color: var(--disabled-color);
+    }
+
+    &.control--radio {
+      input:checked + .control__box::after {
+        background: var(--disabled-color);
+      }
+    }
+
+    &.control--checkbox {
+      input:checked + .control__box::after {
+        border-color: #f4f4f4;
+      }
+    }
+  }
+}

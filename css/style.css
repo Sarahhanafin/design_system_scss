@@ -98,6 +98,13 @@ i.icon {
   display: block;
 }
 
+.input-wrapper .icon-calendar {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+  color: #666;
+}
+
 .icons-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -221,10 +228,15 @@ i.icon-eye {
 ========================= */
 .inputs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 280px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  justify-content: space-between;
   width: 100%;
+}
+
+.input-group,
+.input-wrapper,
+.code {
+  box-sizing: border-box;
 }
 
 /* RESPONSIVE */
