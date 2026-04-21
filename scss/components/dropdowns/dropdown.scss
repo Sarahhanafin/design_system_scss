@@ -1,45 +1,66 @@
 @use '../../foundations/index' as *;
 
-.dropdown-label {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 6px;
-    display: block;
-    color: #344054;
-  }
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   
-  .dropdown {
-    width: 220px;
-    padding: 10px 14px;
-    font-size: 14px;
-    border: 1px solid #d0d5dd;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #344054;
-    cursor: pointer;
-  
-    // Remove default browser styling
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  
-    // Custom arrow icon
-    background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%236B7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6 9l6 6 6-6'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-  
-    &:hover {
-      border-color: #b4b9c3;
+    &__label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #344054;
     }
   
-    &:focus {
-      outline: none;
-      border-color: #7f56d9;
-      box-shadow: 0 0 0 3px rgba(127, 86, 217, 0.2);
+    &__select-wrapper {
+      position: relative;
+      width: 220px;
+  
+      // Custom arrow
+      &::after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        pointer-events: none;
+  
+        background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%236B7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6 9l6 6 6-6'/></svg>");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
     }
   
-    option {
-      padding: 10px;
+    &__select {
+      width: 100%;
+      padding: 10px 14px;
+      padding-right: 36px; // space for arrow
+      font-size: 14px;
+      color: #344054;
+      background-color: #fff;
+  
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+  
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  
+      cursor: pointer;
+  
+      &:hover {
+        border-color: #b4b9c3;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: #7f56d9;
+        box-shadow: 0 0 0 3px rgba(127, 86, 217, 0.2);
+      }
+  
+      option {
+        padding: 10px;
+      }
     }
   }
