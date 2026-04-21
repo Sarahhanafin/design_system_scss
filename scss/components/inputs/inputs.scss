@@ -154,23 +154,21 @@
     margin: 0;
   }
   
-  /* DATE INPUT FIX */
   input[type="date"] {
+    width: 100%;
+    padding-right: 2.5rem;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: textfield;
   }
   
-  /* Chrome / Safari / Edge */
+  /* Hide Chrome / Safari / Edge calendar icon */
   input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     display: none;
+    -webkit-appearance: none;
   }
   
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    margin: 0;
-    padding: 0;
-  }
   
   /* ERROR STATE */
   .input-group.has-error .input-wrapper {
