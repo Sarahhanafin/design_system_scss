@@ -30,14 +30,14 @@
         <div class="dropdown">
             <button class="dropdown__toggle" type="button">
               <span class="dropdown__label">SELECT</span>
-              <span class="dropdown__icon" aria-hidden="true"></span>
+              <span class="dropdown__caret"></span>
             </button>
           
-            <ul class="dropdown__menu">
-              <li><button type="button">Option One</button></li>
-              <li><button type="button">Option Two</button></li>
-              <li><button type="button">Option Three</button></li>
-            </ul>
+            <div class="dropdown__menu">
+              <button type="button">Option One</button>
+              <button type="button">Option Two</button>
+              <button type="button">Option Three</button>
+            </div>
           </div>
 
           <script>
@@ -50,19 +50,20 @@
               dropdown.classList.toggle("is-open");
             });
           
-            options.forEach(option => {
+            options.forEach((option) => {
               option.addEventListener("click", () => {
                 label.textContent = option.textContent;
                 dropdown.classList.remove("is-open");
               });
             });
           
-            document.addEventListener("click", e => {
+            document.addEventListener("click", (e) => {
               if (!dropdown.contains(e.target)) {
                 dropdown.classList.remove("is-open");
               }
             });
           </script>
+          
           
          
           
