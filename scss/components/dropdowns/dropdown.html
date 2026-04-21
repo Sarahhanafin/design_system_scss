@@ -27,21 +27,30 @@
 
         </br>
 
-        <div class="filter">
-            <label for="location" class="filter__label">Location</label>
+        <div class="dropdown">
+            <button class="dropdown__toggle">
+              Select an item
+              <span class="dropdown__arrow"></span>
+            </button>
           
-            <div class="filter__select-wrapper">
-              <select id="location" class="filter__select">
-                <option value="atlanta">Atlanta</option>
-                <option value="london">London</option>
-                <option value="new-york">New-York</option>
-                <option value="paris">Paris</option>
-                <option value="san-francisco">San Francisco</option>
-                <option value="shanghai">Shanghai</option>
-              </select>
-            </div>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Select an item</li>
+              <li class="dropdown__item dropdown__item--active">Item 1</li>
+              <li class="dropdown__item">Item 2</li>
+              <li class="dropdown__item">Item 3</li>
+              <li class="dropdown__item">Item 4</li>
+              <li class="dropdown__item">Item 5</li>
+              <li class="dropdown__item">Item 6</li>
+            </ul>
           </div>
 
-      
+          <script>
+            const dropdown = document.querySelector(".dropdown");
+            const toggle = document.querySelector(".dropdown__toggle");
+          
+            toggle.addEventListener("click", () => {
+              dropdown.classList.toggle("is-open");
+            });
+          </script>
 
 </body>
