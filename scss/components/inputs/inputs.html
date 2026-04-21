@@ -27,23 +27,31 @@
             <div class="input-group">
                 <label>Date</label>
                 <div class="input-wrapper">
-                  <input id="date-input" type="date">              
+                  <input id="date-input" type="text" placeholder="Select date" readonly>             
                   <i id="calendar-btn" class="icon icon-calendar"></i>
                 </div>
               </div>
 
-          <script>
-            const input = document.getElementById("date-input");
-            const icon = document.getElementById("calendar-btn");
-          
-            icon.addEventListener("click", () => {
-              if (input.showPicker) {
-                input.showPicker(); // modern browsers
-              } else {
-                input.focus(); // fallback
-              }
-            });
-          </script>
+              <input id="hidden-date" type="date" style="position:absolute; opacity:0; pointer-events:none;">
+              <script>
+                const displayInput = document.getElementById("date-input");
+                const hiddenInput = document.getElementById("hidden-date");
+                const icon = document.getElementById("calendar-btn");
+              
+                // open picker from icon
+                icon.addEventListener("click", () => {
+                  if (hiddenInput.showPicker) {
+                    hiddenInput.showPicker();
+                  } else {
+                    hiddenInput.focus();
+                  }
+                });
+              
+                // when date is picked, show it in text field
+                hiddenInput.addEventListener("change", () => {
+                  displayInput.value = hiddenInput.value;
+                });
+              </script>
       
           <div class="input-group">
             <label>Search</label>
