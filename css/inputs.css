@@ -153,4 +153,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .input-group.is-disabled input {
   cursor: not-allowed;
+}
+
+.icon-calendar {
+  cursor: pointer;
 }/*# sourceMappingURL=inputs.css.map */

@@ -28,9 +28,22 @@
             <label>Date</label>
             <div class="input-wrapper">
               <i class="icon icon-calendar"></i>
-              <input type="date" placeholder="DD/MM/YY">
+              <input id="date-input" type="date" placeholder="DD/MM/YY">
             </div>
           </div>
+
+          <script>
+            const input = document.getElementById("date-input");
+            const icon = document.getElementById("calendar-btn");
+          
+            icon.addEventListener("click", () => {
+              if (input.showPicker) {
+                input.showPicker(); // modern browsers
+              } else {
+                input.focus(); // fallback
+              }
+            });
+          </script>
       
           <div class="input-group">
             <label>Search</label>
