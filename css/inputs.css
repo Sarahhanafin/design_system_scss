@@ -50,15 +50,27 @@
 
 /* INPUT WRAPPER (THE BOX) */
 .input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+}
+.input-wrapper input[type=date] {
   width: 100%;
-  height: 44px;
-  padding: 0 12px;
-  border: 1px solid #2f3a56;
-  border-radius: 4px;
-  background: #fff;
+  padding-right: 2.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+.input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+.input-wrapper .icon-calendar {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+  pointer-events: auto;
+  color: #666;
 }
 
 /* INPUT FIELD */
@@ -153,8 +165,4 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .input-group.is-disabled input {
   cursor: not-allowed;
-}
-
-.icon-calendar {
-  cursor: pointer;
 }/*# sourceMappingURL=inputs.css.map */
