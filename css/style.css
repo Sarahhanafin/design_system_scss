@@ -225,6 +225,7 @@ i.icon-eye {
   gap: 40px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .inputs-grid {
     grid-template-columns: repeat(2, 280px);
@@ -242,6 +243,7 @@ i.icon-eye {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 .input-group label {
@@ -250,37 +252,64 @@ i.icon-eye {
 }
 
 /* =========================
-   INPUT WRAPPER (REAL INPUT BOX)
+   INPUT WRAPPER
 ========================= */
 .input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fff;
 }
 
 /* =========================
-   INPUT FIELD
+   INPUT FIELD (GLOBAL)
 ========================= */
 .input-wrapper input {
   width: 100%;
+  min-width: 0;
   border: none;
   outline: none;
+  background: transparent;
   font-size: 14px;
   color: #2f3a56;
-  background: transparent;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 
+/* placeholder */
 .input-wrapper input::placeholder {
   color: #8fa0c0;
 }
 
 /* =========================
-   ICONS
+   DATE INPUT FIX (IMPORTANT)
+========================= */
+input[type=date] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+}
+
+/* Chrome / Safari / Edge */
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* extra safety for WebKit */
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* =========================
+   ICON
 ========================= */
 .icon {
   width: 18px;
@@ -288,30 +317,16 @@ i.icon-eye {
   flex-shrink: 0;
 }
 
+/* custom calendar icon */
 .icon-calendar {
   position: absolute;
-  right: 12px;
+  right: 0.75rem;
   cursor: pointer;
   color: #666;
 }
 
 /* =========================
-   DATE INPUT (SAFE VERSION)
-========================= */
-input[type=date] {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-}
-
-/* hide native calendar icon safely */
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  display: none;
-}
-
-/* =========================
-   BUTTON ICONS
+   BUTTON ICONS (optional)
 ========================= */
 .icon-button {
   border: none;
@@ -322,6 +337,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.icon-button:hover {
+  opacity: 0.7;
 }
 
 /* =========================
@@ -338,7 +359,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* =========================
-   ERROR STATE
+   STATES
 ========================= */
 .input-group.has-error .input-wrapper {
   border-color: red;
@@ -349,9 +370,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: red;
 }
 
-/* =========================
-   DISABLED STATE
-========================= */
 .input-group.is-disabled {
   opacity: 0.5;
 }
@@ -361,7 +379,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* =========================
-   CODE BOXES
+   TEXT BOXES
 ========================= */
 .code {
   width: 100%;
