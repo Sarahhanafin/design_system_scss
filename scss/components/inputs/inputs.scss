@@ -14,40 +14,37 @@
   }
 }
 
-.input-wrapper {
-    width: 100%;
-    height: 44px;
-    padding: 0 12px;
-  
-    display: flex;
-    align-items: center;
-    gap: 8px; 
-  
-    border: 1px solid #2f3a56;
-    border-radius: 4px;
-    background: #fff;
-  }
-
-  .input-wrapper input {
-    flex: 1;
-    min-width: 0; // prevents overflow bugs
-  }
-
+/* PAGE SPACING */
 .inputs {
     padding: 40px;
   }
   
+  /* GRID */
   .inputs-grid {
     display: grid;
-    grid-template-columns: repeat(3, 280px); 
+    grid-template-columns: repeat(3, 280px);
     gap: 40px;
   }
   
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .inputs-grid {
+      grid-template-columns: repeat(2, 280px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .inputs-grid {
+      grid-template-columns: 280px;
+    }
+  }
+  
+  /* INPUT GROUP */
   .input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 100%; 
+    width: 100%;
   }
   
   /* LABEL */
@@ -56,12 +53,13 @@
     font-weight: 500;
   }
   
-  /* INPUT BOX */
+  /* INPUT WRAPPER (THE BOX) */
   .input-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
   
+    width: 100%;
     height: 44px;
     padding: 0 12px;
   
@@ -73,6 +71,7 @@
   /* INPUT FIELD */
   .input-wrapper input {
     flex: 1;
+    min-width: 0;
   
     border: none;
     outline: none;
@@ -84,9 +83,13 @@
     padding: 0;
     margin: 0;
   
-    /* remove browser weirdness */
     appearance: none;
     -webkit-appearance: none;
+  }
+  
+  /* PLACEHOLDER */
+  .input-wrapper input::placeholder {
+    color: #8fa0c0;
   }
   
   /* ICONS */
@@ -94,6 +97,57 @@
     width: 18px;
     height: 18px;
     flex-shrink: 0;
+  }
+  
+  /* BUTTONS (for +, -, eye) */
+  .icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  
+    width: 18px;
+    height: 18px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 0;
+    color: #2f3a56;
+    flex-shrink: 0;
+  }
+  
+  .icon-button:hover {
+    opacity: 0.7;
+  }
+  
+  /* GROUPED ACTIONS (quantity input) */
+  .input-actions {
+    display: flex;
+    gap: 4px;
+  }
+  
+  /* FIX NUMBER INPUT */
+  input[type="number"] {
+    flex: 1;
+    min-width: 0;
+    -moz-appearance: textfield;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* DATE INPUT FIX */
+  input[type="date"] {
+    -webkit-appearance: none;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    margin: 0;
+    padding: 0;
   }
   
   /* ERROR STATE */
@@ -106,7 +160,7 @@
     color: red;
   }
   
-  /* DISABLED */
+  /* DISABLED STATE */
   .input-group.is-disabled {
     opacity: 0.5;
   }
@@ -114,31 +168,4 @@
   .input-group.is-disabled input {
     cursor: not-allowed;
   }
-
-  /* ICON BUTTONS (for +, -, eye) */
-.icon-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 0 4px;
-    color: #2f3a56;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 20px;
-  }
-  
-  .icon-button:hover {
-    opacity: 0.7;
-  }
-
-
-input[type="number"] {
-    flex: 1;   
-    min-width: 0;
-  }
-  
 
