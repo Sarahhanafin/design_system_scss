@@ -68,7 +68,7 @@
 }
 .message--success {
   background: #3f8f2f;
-  color: #fff;
+  color: #000000;
 }
 .message--success .message__icon {
   background: #00e126;
@@ -96,7 +96,7 @@
 }
 .message--warning {
   background: #b9770e;
-  color: #fff;
+  color: #000000;
 }
 .message--warning .message__icon {
   background: #ffcc33;
