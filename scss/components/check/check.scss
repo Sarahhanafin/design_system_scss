@@ -16,7 +16,7 @@ h1 {
 }
 
 .tokens {
-  background: #fff;
+  background: $primary-100;
 }
 
 .check-grid {
@@ -94,7 +94,7 @@ h1 {
       top: 46%;
       width: 28%;
       height: 58%;
-      border: solid #fff;
+      border: solid $neutral-100;
       border-width: 0 4px 4px 0;
       transform: translate(-50%, -58%) rotate(45deg);
       box-sizing: border-box;
@@ -168,7 +168,7 @@ h1 {
 
     &.control--checkbox {
       input:checked + .control__box::after {
-        border-color: #f4f4f4;
+        border-color: $neutral-100;
       }
     }
   }
