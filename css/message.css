@@ -66,6 +66,9 @@
 .message--error-outline .message__title {
   margin: 0;
 }
+.message .message__text {
+  background: transparent;
+}
 .message--success {
   background: #3f8f2f;
   color: #000000;

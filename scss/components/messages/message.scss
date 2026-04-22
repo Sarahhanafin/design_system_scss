@@ -76,6 +76,10 @@
     }
   }
 
+  .message__text {
+  background: transparent;
+}
+
   // Filled Success
   &--success {
     background: #3f8f2f;
