@@ -39,10 +39,10 @@ h1 {
 }
 
 .control {
-  --control-size: 32px;
+  --control-size: 32PX;
   --label-size: 32px;
-  --border-color: #6f8fc8;
-  --active-color: #6f8fc8;
+  --border-color: #$primary-300;
+  --active-color: #$primary-300;
   --disabled-color: #bdbdbd;
   display: inline-flex;
   align-items: center;
